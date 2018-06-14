@@ -15,6 +15,25 @@
 }
 
 </style>
+
+<div class='slidecontainer'>
+	<input type="range" min="1" max="100" value="50" class="slider"
+	id='myrange'> </div>
+
+<div id='demo'> </div>
+
+<script type="text/javascript">
+	var slider = document.getElementById('myrange');
+	var output = document.getElementById('demo');
+	output.innerHTML = slider.value;
+
+	slider.oninput = function(){
+		output.innerHTML = this.value
+	}
+</script>
+
+
+
 <div class="chart"></div>
 <script src="//d3js.org/d3.v3.min.js"></script>
 <script>
